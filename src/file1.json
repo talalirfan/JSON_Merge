@@ -1,0 +1,10 @@
+{
+  "name": "talal",
+  "age": 25,
+  "address": {
+    "street1": "H.No.1",
+    "street2": "I-9",
+    "city": "Islamabad",
+    "zip": 44000
+  }
+
