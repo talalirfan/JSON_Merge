@@ -19,7 +19,20 @@ include_directories(${THIRD_PARTY_SOURCE_DIR}/json/include/nlohmann)
 #find_package(nlohmann_json CONFIG REQUIRED)
 
 #include_directories(${CMAKE_SOURCE_DIR}/src)
-add_executable(main main.cpp)
+
+
+# Local header files here ONLY
+SET(TARGET_H
+    MergeFile.h    
+   )
+
+# Local source files here
+SET(TARGET_SRC
+    MergeFile.cpp
+    )
+
+file(GLOB SOURCES "*.cpp")
+add_executable(main ${SOURCES})
 #target_link_libraries(main nlohmann_json)
 
 #add_executable(merge main.cpp)
