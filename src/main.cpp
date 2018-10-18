@@ -7,9 +7,9 @@
 using namespace nlohmann;
 //using namespace std;
 
-int main(){
-	string s1 = "file1.json";
-	string s2 = "file2.json";
+int main(int argc, char** argv){
+	string s1 = argv[1];
+	string s2 = argv[2];
 
 	MergeFile a(s1,s2);
 	a.merge();
