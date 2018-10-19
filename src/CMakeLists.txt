@@ -47,7 +47,7 @@ SET(TARGET_SRC
     )
 
 file(GLOB SOURCES "*.cpp")
-add_executable(main ${SOURCES})
-target_link_libraries(main ${Boost_LIBRARIES})
+add_executable(merge ${SOURCES})
+target_link_libraries(merge ${Boost_LIBRARIES})
 
 #add_executable(merge main.cpp)
