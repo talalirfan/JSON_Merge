@@ -5,7 +5,7 @@
 #include <fstream>
 
 using namespace nlohmann;
-using namespace std;
+
 
 		MergeFile :: MergeFile(string s1, string s2){
 
@@ -33,6 +33,13 @@ using namespace std;
 		void MergeFile :: display(){
 
 			std::cout << setw(4) << f1 << endl;
+
+		}
+
+		void MergeFile :: write(){
+
+			std::ofstream o("Merged.json");
+			o << std::setw(4) << f1 << std::endl;
 
 		}
 

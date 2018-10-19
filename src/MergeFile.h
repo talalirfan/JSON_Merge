@@ -26,6 +26,8 @@ class MergeFile{
 
 		void display();
 
+		void write();
+
 
 
 };
