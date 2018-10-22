@@ -37,6 +37,6 @@ make
 
 - Get merged output in a file
 ```
-./merge --f 'filename1' 'filename 2'
+./merge --f 'filename1' 'filename 2' 'outputFile'
 ```
 
