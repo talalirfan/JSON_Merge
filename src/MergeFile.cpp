@@ -1,46 +1,37 @@
 #include "MergeFile.h"
-#include<iostream>
+#include <iostream>
 #include <iomanip>
-#include "json.hpp"
 #include <fstream>
 
 using namespace nlohmann;
 
 
-		MergeFile :: MergeFile(string s1, string s2){
+MergeFile::MergeFile(string inputFile1, string inputFile2)
+{
+   ifstream i(inputFile1);
 
-			
-			ifstream i(s1);
-			i >> f1;
-			
-
-			ifstream a(s2);
-			a >> f2;
+   i >> jsonObj1;
 
 
-		}
+   ifstream a(inputFile2);
+   a >> jsonObj2;
+}
 
 
-
-		void MergeFile :: merge(){
-
-			f1.merge_patch(f2);
-
-		}
+void MergeFile::merge()
+{
+   jsonObj1.merge_patch(jsonObj2);
+}
 
 
-
-		void MergeFile :: display(){
-
-			std::cout << setw(4) << f1 << endl;
-
-		}
-
-		void MergeFile :: write(){
-
-			std::ofstream o("Merged.json");
-			o << std::setw(4) << f1 << std::endl;
-
-		}
+void MergeFile::display()
+{
+   std::cout << setw(4) << jsonObj1 << endl;
+}
 
 
+void MergeFile::write(string outputFile)
+{
+   std::ofstream o(outputFile);
+   o << std::setw(4) << jsonObj1 << std::endl;
+}

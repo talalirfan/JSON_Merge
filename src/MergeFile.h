@@ -1,35 +1,21 @@
-#ifndef MergeFile_H
-#define MergeFile_H
+#pragma
 
-
-#include <iomanip>
 #include "json.hpp"
-#include <fstream>
 
 using namespace nlohmann;
 using namespace std;
 
 
-class MergeFile{
+class MergeFile {
+private:
+   json jsonObj1, jsonObj2;
 
-	private:
-		json f1,f2;
+public:
+   MergeFile(string inputFile1, string inputFile2);
 
-	public:
-		MergeFile(string s1, string s2);
+   void merge();
 
+   void display();
 
-
-		void merge();
-
-
-
-		void display();
-
-		void write();
-
-
-
+   void write(string a);
 };
-
-#endif
